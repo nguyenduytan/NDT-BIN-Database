@@ -1,0 +1,4 @@
+import argparse, json
+from .query import BinQuery
+def main():
+    p=argparse.ArgumentParser(description="NDT BIN Database search"); p.add_argument("--bin"); p.add_argument("--country"); p.add_argument("--issuer"); p.add_argument("--scheme"); p.add_argument("--type"); p.add_argument("--level"); p.add_argument("--bin-length",dest="bin_length",type=int); p.add_argument("--prepaid",action=argparse.BooleanOptionalAction); p.add_argument("--page",type=int,default=1); p.add_argument("--page-size",dest="page_size",type=int,default=50); p.add_argument("--json",action="store_true"); args=p.parse_args(); values=vars(args); values.pop("json"); q=BinQuery(); result=q.search(**values); print(json.dumps(result,ensure_ascii=False,indent=2) if args.json else "\n".join(" | ".join(str(v or "") for v in r.values()) for r in result["items"])); q.close()

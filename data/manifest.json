@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-26",
+  "stats": {
+    "rows": 458075,
+    "countries": 225,
+    "issuers": 18505,
+    "schemes": 75,
+    "updated_at": "2026-10-26"
+  },
+  "sources": [
+    {
+      "id": "primary",
+      "url": "https://raw.githubusercontent.com/venelinkochev/bin-list-data/master/bin-list-data.csv",
+      "rows": 374788,
+      "accepted": 374788,
+      "rejected": 0,
+      "sha256": "0583860988c7b15d2921025ee8afe89eaf4947fe31acde8ffccfc82691d13e35"
+    },
+    {
+      "id": "secondary",
+      "url": "https://raw.githubusercontent.com/iannuttall/binlist-data/master/binlist-data.csv",
+      "rows": 343063,
+      "accepted": 343056,
+      "rejected": 7,
+      "sha256": "f26cd778c3fda1605bb05bf194f65bb156a84f513dd7347ab5dd11b0bc45544d"
+    },
+    {
+      "id": "community",
+      "url": "https://raw.githubusercontent.com/marlonlp/binlist-data/master/binlist-data.csv",
+      "rows": 374819,
+      "accepted": 374818,
+      "rejected": 1,
+      "sha256": "fcb60914fe354b54c914abc348bc63a3767bab7f14452d2d47a85f2c2f8eb2f4"
+    }
+  ]
+}
